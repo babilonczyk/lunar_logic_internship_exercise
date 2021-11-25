@@ -1,15 +1,35 @@
-# Phone
+# Introduction
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/phone`. To experiment with that code, run `bin/console` for an interactive prompt.
+This is a numpad that you will use to enter a PIN code:
+1 2 3
+4 5 6
+7 8 9
 
-TODO: Delete this and the text above, and describe your gem
+At the very beginning you start with "5", afterwards you always start with a previous button and move your finger accordingly to the instructions.
+The instructions consist of letters that tell you how to move your finger: U (move up), D (move down), L (move left), R (move right). Instructions consist of multiple lines.
+At the end of every line (and only there) you actually need to press the button you're on. The pressed buttons are the PIN code.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+```ruby
+bundle install
+```
+
+## How to run app?
 
 ```ruby
-gem 'phone'
+$> ruby phone_runner.rb 
+
+$> <MOVEMENT_INSTRUCTIONS>
+
+$> X 
+```
+X - to exit 
+
+## How to run test?
+
+```ruby
+ruby phone_runner.rb <MOVEMENT_INSTRUCTIONS>
 ```
 
 And then execute:
